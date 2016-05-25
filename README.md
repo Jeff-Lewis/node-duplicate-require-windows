@@ -19,7 +19,7 @@ Lowercase `require.resolve('./../moduleA') c:\temp\node_6624\moduleA.js`
 2) There must be a circular reference between modules somewhere along the dependency chain where
 a child module (in this example moduleB) must be require()'ed with lowercase drive letter, ex. `require(path.join('dir','moduleB'))`
 
-#####
+##### To Reproduce:
 1) Using Windows, clone project
 2) run `run.bat`
 
@@ -33,7 +33,7 @@ You will see at the end of the console output, `moduleA.js` was loaded twice.
   'c:\\temp\\node_6624\\moduleA.js' ]
 ```
 
-See test.js for how to reproduce
+See <https://github.com/Jeff-Lewis/node-duplicate-require-windows/blob/master/test.js> for code
 
 ##### How often does this happen?
 
@@ -46,3 +46,4 @@ The case of the drive letter on Windows should not affect the node run-time and 
 
 ##### References:
 <https://github.com/nodejs/node/issues/6624>
+<https://github.com/nodejs/node/issues/6624#issuecomment-221311350>
