@@ -43,6 +43,7 @@ See <https://github.com/Jeff-Lewis/node-duplicate-require-windows/blob/master/te
 ##### Why should this be fixed?
 
 The case of the drive letter on Windows should not affect the node run-time and how modules are loaded.
+***Once this case occurs, all require() paths will be changed causing node to potentially load ALL subsequent modules again.***
 
 ##### References:
 <https://github.com/nodejs/node/issues/6624>
